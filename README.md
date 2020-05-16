@@ -7,6 +7,7 @@ Commands she can do, Commands with arguments afterwards:
 - /caps ANYTHING YOU TYPE HERE WILL BE IN ALL CAPS
 - /WeIrD AnYtHiNg YoU TyPe HeRe WiLl Be SpElT In WeIrD CaSe WhErE EaCh ChArAcTeR AlTeRnAtEs CaSe. LiKe ThE SpOnGeBoB MeMe
 - /owoify Huohhhh. anythng uu type hewe wiww become vewy owoifyed ;3
+- /echo Anything you type here, i'll repeat!
 
 Commands without arguments:
 - /start - recites the starting text when you first launched her
