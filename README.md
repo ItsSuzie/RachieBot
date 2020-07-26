@@ -19,3 +19,12 @@ anything you type in, she'll go ahead and echo back to you
 have fun!
 
 Created by @Sindiewen
+
+
+Now this is for my own telegram bot @rachiebot, but any of the code could be used for your own bot as long as you bring your own bot.
+Here's the steps:
+- Make sure pip is installed (for something like Ubuntu, apt install python3-pip, idk about other os's)
+- Get the Python Telegram bot library here ---> https://github.com/python-telegram-bot/python-telegram-bot (if python 3, use pip3 instal ...)
+- Create the file "createTelegramBot.py", import telegram, and create a function 'def createTelegramBot()' that returns the bot with it's token 'return telegram.bot(token='token for your bot goes here')
+- run python3 main.py
+- shitpost
