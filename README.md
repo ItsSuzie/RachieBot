@@ -14,8 +14,6 @@ Commands without arguments:
 - /rp - Prints the infamous furry owo whats this copypasta
 - /tragedy - prints the amazing farth plageus the wise copypasta
 
-No commands commands:
-anything you type in, she'll go ahead and echo back to you
 have fun!
 
 Created by @Sindiewen
