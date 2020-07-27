@@ -25,6 +25,6 @@ Here's the steps:
 - Get the Python Telegram bot library here ---> https://github.com/python-telegram-bot/python-telegram-bot (if python 3, use pip3 instal ...)
 - Create the file "createTelegramBot.py", import telegram, and create a function 'def createTelegramBot()' that returns the bot with it's token 'return telegram.bot(token='token for your bot goes here')
 - run program as following:
-  - Run as is: 'python3 main.py'
-  - Run in the background: 'nohup python3 main.py &' (this prevents some weird issues with it trying to create multiple instandces of the bot?) thks https://askubuntu.com/questions/396654/how-to-run-a-python-program-in-the-background-even-after-closing-the-terminal <3
+  - Run as is: 'python3 rachiebot.py'
+  - Run in the background: 'nohup python3 rachibot.py &' (this prevents some weird issues with it trying to create multiple instandces of the bot?) thks https://askubuntu.com/questions/396654/how-to-run-a-python-program-in-the-background-even-after-closing-the-terminal <3
 - shitpost
