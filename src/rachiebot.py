@@ -30,7 +30,7 @@ import owoifier
 ### program entry
 ### </Summary>
 def main():
-    print("Hello world!")
+#    print("Hello world!")
     
     initRachieBot() 
 
