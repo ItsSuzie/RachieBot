@@ -72,6 +72,7 @@ def initRachieBot():
     teleDispatcher.add_handler(owo_handler) 
     teleDispatcher.add_handler(rp_handler)
     teleDispatcher.add_handler(tragedy_handler)
+    teleDispatcher.add_handler(navy_handler)
 
     #run the bot
     print("\n\nBot setup successful. Now running!")
