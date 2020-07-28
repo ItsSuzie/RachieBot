@@ -13,6 +13,7 @@ Commands without arguments:
 - /start - recites the starting text when you first launched her
 - /rp - Prints the infamous furry owo whats this copypasta
 - /tragedy - prints the amazing farth plageus the wise copypasta
+- /navyseal - prints the legendary navyseal copypasta
 
 have fun!
 
@@ -30,5 +31,5 @@ Here's the steps:
   - Run in the background: 
     - 'nohup python3 rachibot.py &' (this prevents some weird issues with it trying to create multiple instandces of the bot?) thks https://askubuntu.com/questions/396654/how-to-run-a-python-program-in-the-background-even-after-closing-the-terminal <3
     - Since it's in the background, you'll need to get it's process id and kill is
-    - run 'ps ax | grep rachiebot.py' then kill it's process id
+    - run 'ps -ax | grep rachiebot.py' then kill it's process id
 - shitpost
