@@ -1,5 +1,10 @@
 #!/bin/bash
 # An easy program to start and (eventually) stop rachiebot
+# if on zsh: https://stackoverflow.com/questions/53229221/terminal-error-zsh-permission-denied-startup-sh
+# run this command:
+# cd ~/the/script/folder
+#
+# chmod +x ./startup.sh
 
 function start()
 {
