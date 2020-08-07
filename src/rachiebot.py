@@ -46,7 +46,7 @@ def initRachieBot():
     print(bot.get_me())
 
     #Creates updater object
-    teleUpdater = Updater(token='1005137538:AAEZspouOQLj7WTGkGrUZ1ubNxvbuD93Gu8', use_context=True)
+    teleUpdater = Updater(token=createTelegramBot.getToken(), use_context=True)
     teleDispatcher = teleUpdater.dispatcher
 
     #Create logging object
