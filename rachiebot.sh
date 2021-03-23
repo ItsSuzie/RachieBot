@@ -6,18 +6,31 @@
 #
 # chmod +x ./startup.sh
 
-function start()
+function startTG()
 {
-    printf "Starting Rachiebot..."
+    printf "Starting Rachiebot Telegram..."
     python3 src/rachiebot.py
 }
 
-function startBG()
+function startDiscord()
 {
-    printf "Starting Rachiebot in background..."
+    printf "Starting Rachiebot Discord..."
+    python3 src/rbDiscord.py
+}
+
+function startBGTG()
+{
+    printf "Starting Rachiebot, running in background..."
     rm nohup.out
     nohup python3 src/rachiebot.py &
     # printf "Rachiebot Process ID = ${$$}"
+}
+
+function startBGDiscord()
+{
+    printf "Starting Rachiebot discord, running in background..."
+    rm nohup.out
+    nohup python3 src/rbDiscord.py &
 }
 
 # For finding and killing the process
@@ -26,26 +39,43 @@ function startBG()
     # Im curious how this can be done. probably try and get the current pid of the program
 # }
 
-function getPID()
+function getPIDTG()
 {
     ps -ax | grep rachiebot.py
+}
+
+function getPIDDiscord()
+{
+    ps -ax | grep rbDiscord.py
 }
 
 # If the user entered 1 argument 
 if [ "$#" = 1 ]
 then
     # if the user types start as it's argument
-    if [ "$1" == 'start' ]
+    if [ "$1" == 'starttelegram' ]
     then 
-        start
+        startTG
     
-    elif [ "$1" == 'startbg' ]
+    elif [ "$1" == 'startdiscord' ]
     then
-        startBG
+        startDiscord
 
-    elif [ "$1" == "getPID" ]
+    elif [ "$1" == 'startbgtg' ]
     then
-        getPID
+        startBGTG
+
+    elif [ "$1" == 'startbgdiscord' ]
+    then
+        startBGDiscord
+
+    elif [ "$1" == "getpidtg" ]
+    then
+        getPIDTG
+
+    elif [ "$1" == "getpiddiscord" ]
+    then
+        getPIDDiscord
     # elif [ "$1" == 'stop' ]
     # then
     #     # killBG
