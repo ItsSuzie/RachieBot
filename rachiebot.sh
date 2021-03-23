@@ -53,7 +53,7 @@ function getPIDDiscord()
 if [ "$#" = 1 ]
 then
     # if the user types start as it's argument
-    if [ "$1" == 'starttelegram' ]
+    if [ "$1" == 'starttg' ]
     then 
         startTG
     
