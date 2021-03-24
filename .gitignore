@@ -132,3 +132,4 @@ dmypy.json
 # Rachie's speicifc files to ignore:
 createTelegramBot.py
 createDiscordBot.py
+nohup.out

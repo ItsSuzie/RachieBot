@@ -101,7 +101,7 @@ def initRachieBotTelegram():
 
 # recites the starting text when you first launched her
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Hello world! I'm RachieBot! Rachie's shitposter bot!\n\nI have a variety of commands to play with!\n\nCommands I can do, Commands with arguments afterwards:\n- /caps ANYTHING YOU TYPE HERE WILL BE IN ALL CAPS\n- /weird AnYtHiNg YoU TyPe HeRe WiLl Be SpElT In WeIrD CaSe WhErE EaCh ChArAcTeR AlTeRnAtEs CaSe. LiKe ThE SpOnGeBoB MeMe\n- /owoify Huohhhh. anythng uu type hewe wiww become vewy owoifyed ;3\n- /echo Anything you type here, i'll repeat!\n\nCommands without arguments:\n- /start - recites the starting text when you first launched her\n- /rp - Prints the infamous furry owo whats this copypasta\n- /tragedy - prints the amazing farth plageus the wise copypasta\n/navyseal - prints the legendary navyseal copypasta\n\nhave fun!\n\nCreated by @Sindiewen\nSource code avaliable here: https://github.com/Sindiewen/RachieBot-Telegram-Bot")
+    context.bot.send_message(chat_id=update.effective_chat.id, text=copypastas.cp_intro)
 
 # Prints owo copypasta
 def rp(update, context):
