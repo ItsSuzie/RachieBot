@@ -54,7 +54,9 @@ def timezoneConversion(timezone):
         convert = myTime.in_timezone(timezoneDict[timeList[4]])
         # print("printing converted time")
         # print(convert)
-        print(convert.strftime('%I:%M:%S %p'))
+        # print(convert.strftime('%I:%M:%S %p'))
+        return convert.strftime('%I:%M:%S %p')
+
 
     
 
@@ -62,8 +64,8 @@ def timezoneConversion(timezone):
 
 def from12HourTo24Hour(ampmTime, ampm):
     # if the time is in pm, add 12 to the current time, assuming that the number doesnt exceed 24
-    print("old time")
-    print(ampmTime)
+    # print("old time")
+    # print(ampmTime)
     newTime = 0
     if ampm == "pm":
         if ampmTime == 12:
@@ -71,9 +73,9 @@ def from12HourTo24Hour(ampmTime, ampm):
         else:
             newTime = ampmTime + 12
 
-    print("new time")
-    print(newTime)
-    print("\n\n")
+    # print("new time")
+    # print(newTime)
+    # print("\n\n")
     return newTime
     
 
