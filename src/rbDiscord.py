@@ -1,6 +1,6 @@
 # Import the discord module needed
 import discord
-
+import discord.ext.commands
 
 
 # python file, to create the discord bot 
@@ -25,6 +25,7 @@ import createDiscordBot
 import WeIrD_StRiNg_CaSe
 import owoifier
 import copypastas
+import timezoneConverter
 
 
 # Creates discord client
@@ -88,6 +89,8 @@ async def on_message(message):
     if message.content.startswith('$owoify'):
         await message.channel.send(owoifier.to_owo(removeCommand(1, newMsg)))
 
+    
+
 
 
     # Copypastas
@@ -100,6 +103,8 @@ async def on_message(message):
     if message.content.startswith("$navyseal"):
         await message.channel.send(copypastas.cp_nvs)
 
+    
+
 
     # notices stuffs
     # if message.content.startswith('sus'):
@@ -111,13 +116,34 @@ async def on_message(message):
 
 
     # CHeck the emotes channel if a valid emote has been printed
+    if message.content.startswith('$deleteme'):
+        await message.delete()
+        await message.channel.send("mesage deleted from {0.author}: {0.content}".format(message))
+
+    # within emotes only channel, if message doesnt have emote, delete messge
+    # if client.get_channel(iStricerEmotesOnly).
+    #     await client.get_channel(iStricerEmotesOnly).delete()
+    #     await client.get_channel(iStricerEmotesOnly).send("message deleted from {0.author}: {0.content}".format(message))
+    # if message.channel == iStricerEmotesOnly:
+    channel = client.get_channel(iStricerEmotesOnly)
+    if message.channel == iStricerEmotesOnly:
+        await channel.send("this is a test")
+
+    
 
 
 
-    print('print from {0.author}: {0.content}'.format(message))
+    # timezone program
+    if message.content.startswith("tz!"):
+        await message.reply(timezoneConverter.timezoneConversion(), mention_author = True)
+    
 
 
-# When called, passes a string and removes 
+    # print('print from {0.author}: {0.content}'.format(message))
+
+
+
+# When called, passes a string and removes the command
 def removeCommand(spacing, content):
     finalStr = content.split()
     finalStr = finalStr[spacing:]
@@ -128,6 +154,8 @@ def removeCommand(spacing, content):
 # remove text from emote only channel
 # def emoteOnlyRemoveText():
     # a
+
+
 
 
 # Runs the discord client with the token inside createDiscordBot.py
