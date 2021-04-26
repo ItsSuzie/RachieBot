@@ -52,11 +52,12 @@ def timezoneConversion(timezone):
 
         myTime = pendulum.datetime(2021, 1, 1, time24, 0, 0, 0, timezoneDict[timeList[3]])
         convert = myTime.in_timezone(timezoneDict[timeList[4]])
-        timeDiff = myTime.diff(convert).in_hours()
+        timeDiff = convert.diff(myTime).in_hours()
         # print("printing converted time")
         # print(convert)
         # print(convert.strftime('%I:%M:%S %p'))
-        return convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4] + "\n Time difference is " + str(timeDiff) + " hours")
+        # print(convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4] + "\n Time difference is " + str(timeDiff) + " hours"))
+        return convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4])
 
     # elif len(timeList) == 4:
     #     myTime = pendulum
@@ -87,5 +88,5 @@ def from12HourTo24Hour(ampmTime, ampm):
     return newTime
     
 
-# input = input("enter command:")
-# timezoneConversion(input)
+input = input("enter command:")
+timezoneConversion(input)
