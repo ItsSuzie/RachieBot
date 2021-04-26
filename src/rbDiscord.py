@@ -139,29 +139,29 @@ async def on_message(message):
         randNum = random.randint(1,13)
         if randNum == 1:
             await message.reply(copypastas.cp_rp)
-        if randNum == 2:
+        elif randNum == 2:
             await message.reply(copypastas.cp_tragedy)
-        if randNum == 3:
+        elif randNum == 3:
             await message.reply(copypastas.cp_nvs)
-        if randNum == 4:
+        elif randNum == 4:
             await message.reply(copypastas.cp_fitness)
-        if randNum == 5:
+        elif randNum == 5:
             await message.reply(copypastas.cp_seiso)
-        if randNum == 6:
+        elif randNum == 6:
             await message.reply(copypastas.cp_meso)
-        if randNum == 7:
+        elif randNum == 7:
             await message.reply("i love you bby".format(message))
-        if randNum == 8:
+        elif randNum == 8:
             await message.reply("c-can i get a hug pls @{0.author}?".format(message))
-        if randNum == 9:
+        elif randNum == 9:
             await message.reply("may i please get some huggie wuggies? uwu".format(message))
-        if randNum == 10:
+        elif randNum == 10:
             await message.reply("yay, you're sweet, I love you @{0.author} 💜".format(message))
-        if randNum == 11:
+        elif randNum == 11:
             await message.reply("👉👈I wana date you @{0.author}👉👈".format(message))
-        if randNum == 12:
+        elif randNum == 12:
             await message.reply("Im seiso".format(message))
-        if randNum == 13:
+        elif randNum == 13:
             await message.reply ("im not seiso".format(message))
 
     
