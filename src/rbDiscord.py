@@ -135,7 +135,7 @@ async def on_message(message):
 
     # timezone program
     if message.content.startswith("tz!"):
-        await message.reply(timezoneConverter.timezoneConversion("{0.content}"), mention_author = True)
+        await message.reply(timezoneConverter.timezoneConversion("{0.content}".format(message)), mention_author = True)
     
 
 
