@@ -3,6 +3,8 @@ import discord
 import discord.ext.commands
 import random
 
+from discord.message import Message
+
 
 # python file, to create the discord bot 
 # Not adding the createDiscordBot.py file for security purposes.
@@ -80,6 +82,10 @@ async def on_message(message):
     # commands
     if message.content.startswith("$echo"):
         await message.channel.send(removeCommand(1, newMsg))
+    
+    if message.content.startswith("$say"):
+        await message.delete()
+        await message.channel.send(removeCommand(1, newMsg))
 
     if message.content.startswith('$caps'):
         await message.channel.send(removeCommand(1, newMsg.upper()))
@@ -111,7 +117,7 @@ async def on_message(message):
 
     # if bot is mentioned
     if client.user.mentioned_in(message):
-        randNum = random.randint(1,4)
+        randNum = random.randint(1,8)
         if randNum == 1:
             await message.reply(copypastas.cp_rp)
         if randNum == 2:
@@ -120,6 +126,14 @@ async def on_message(message):
             await message.reply(copypastas.cp_nvs)
         if randNum == 4:
             await message.reply(copypastas.cp_fitness)
+        if randNum == 5:
+            await message.reply("i love you bby")
+        if randNum == 6:
+            await message.reply("c-can i get a hug pls {0.author}?")
+        if randNum == 7:
+            await message.reply("may i please get some huggie wuggies? uwu")
+        if randNum == 8:
+            await message.reply("yay, you're sweet, I love you {0.author} <3")
 
     
 
