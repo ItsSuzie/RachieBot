@@ -79,7 +79,8 @@ async def on_message(message):
         await message.channel.send(startmsg)
 
     
-    # commands
+
+    # parameter commands commands
     if message.content.startswith("$echo"):
         await message.channel.send(removeCommand(1, newMsg))
     
@@ -95,6 +96,12 @@ async def on_message(message):
 
     if message.content.startswith('$owoify'):
         await message.channel.send(owoifier.to_owo(removeCommand(1, newMsg)))
+
+
+
+    # timezone program
+    if message.content.startswith("tz!"):
+        await message.reply(timezoneConverter.timezoneConversion("{0.content}".format(message)), mention_author = True)
 
     
 
@@ -113,11 +120,23 @@ async def on_message(message):
     if message.content.startswith("$fitness"):
         await message.channel.send(copypastas.cp_fitness)
 
+    if message.content.startswith("$seiso"):
+        await message.channel.send(copypastas.cp_seiso)
+    
+    if message.content.startswith("$meso"):
+        await message.channel.send(copypastas.cp_meso)
+    
+    if message.content.startswith("$morty"):
+        await message.channel.send(copypastas.cp_morty)
+
+    if message.content.startswith("$mineDiamonds"):
+        await message.channel.send(copypastas.cp_mineDiamonds)
+
 
 
     # if bot is mentioned
     if client.user.mentioned_in(message):
-        randNum = random.randint(1,8)
+        randNum = random.randint(1,13)
         if randNum == 1:
             await message.reply(copypastas.cp_rp)
         if randNum == 2:
@@ -127,13 +146,23 @@ async def on_message(message):
         if randNum == 4:
             await message.reply(copypastas.cp_fitness)
         if randNum == 5:
-            await message.reply("i love you bby".format(message))
+            await message.reply(copypastas.cp_seiso)
         if randNum == 6:
-            await message.reply("c-can i get a hug pls {0.author}?".format(message))
+            await message.reply(copypastas.cp_meso)
         if randNum == 7:
-            await message.reply("may i please get some huggie wuggies? uwu".format(message))
+            await message.reply("i love you bby".format(message))
         if randNum == 8:
-            await message.reply("yay, you're sweet, I love you {0.author} <3".format(message))
+            await message.reply("c-can i get a hug pls @{0.author}?".format(message))
+        if randNum == 9:
+            await message.reply("may i please get some huggie wuggies? uwu".format(message))
+        if randNum == 10:
+            await message.reply("yay, you're sweet, I love you @{0.author} <3".format(message))
+        if randNum == 11:
+            await message.reply("I wana date you @{0.author} ����")
+        if randNum == 12:
+            await message.reply("Im seiso")
+        if randNum == 13:
+            await message.reply ("im not seiso")
 
     
 
@@ -162,12 +191,6 @@ async def on_message(message):
         await channel.send("this is a test")
 
     
-
-
-
-    # timezone program
-    if message.content.startswith("tz!"):
-        await message.reply(timezoneConverter.timezoneConversion("{0.content}".format(message)), mention_author = True)
     
 
 
