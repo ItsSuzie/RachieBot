@@ -1,6 +1,7 @@
 # Import the discord module needed
 import discord
 import discord.ext.commands
+import random
 
 
 # python file, to create the discord bot 
@@ -94,7 +95,7 @@ async def on_message(message):
 
 
     # Copypastas
-    if message.content.startswitdh('$rp'):
+    if message.content.startswith('$rp'):
         await message.channel.send(copypastas.cp_rp)
 
     if message.content.startswith("$tragedy"):
@@ -105,6 +106,20 @@ async def on_message(message):
 
     if message.content.startswith("$fitness"):
         await message.channel.send(copypastas.cp_fitness)
+
+
+
+    # if bot is mentioned
+    if client.user.mentioned_in(message):
+        randNum = random.randint(1,4)
+        if randNum == 1:
+            await message.reply(copypastas.cp_rp)
+        if randNum == 2:
+            await message.reply(copypastas.cp_tragedy)
+        if randNum == 3:
+            await message.reply(copypastas.cp_nvs)
+        if randNum == 4:
+            await message.reply(copypastas.cp_fitness)
 
     
 
