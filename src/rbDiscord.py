@@ -127,13 +127,13 @@ async def on_message(message):
         if randNum == 4:
             await message.reply(copypastas.cp_fitness)
         if randNum == 5:
-            await message.reply("i love you bby")
+            await message.reply("i love you bby".format(message))
         if randNum == 6:
-            await message.reply("c-can i get a hug pls {0.author}?")
+            await message.reply("c-can i get a hug pls {0.author}?".format(message))
         if randNum == 7:
-            await message.reply("may i please get some huggie wuggies? uwu")
+            await message.reply("may i please get some huggie wuggies? uwu".format(message))
         if randNum == 8:
-            await message.reply("yay, you're sweet, I love you {0.author} <3")
+            await message.reply("yay, you're sweet, I love you {0.author} <3".format(message))
 
     
 
