@@ -103,6 +103,9 @@ async def on_message(message):
     if message.content.startswith("$navyseal"):
         await message.channel.send(copypastas.cp_nvs)
 
+    If message.content.startswith("$fitness"):
+        await message.channel.send(copypastas.cp_fitness)
+
     
 
 
