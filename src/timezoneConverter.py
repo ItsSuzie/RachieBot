@@ -55,7 +55,7 @@ def timezoneConversion(timezone):
         # print("printing converted time")
         # print(convert)
         # print(convert.strftime('%I:%M:%S %p'))
-        return convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timezoneDict[timeList[3]] + ' to %I:%M:%S %p ' + timezoneDict[timeList[4]])
+        return convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4])
 
     # elif len(timeList) == 4:
     #     myTime = pendulum
