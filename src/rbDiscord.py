@@ -108,8 +108,8 @@ async def on_message(message):
 
     # notices stuffs
     # if message.content.startswith('sus'):
-    if 'sus' in message.content: 
-        await message.reply("no u", mention_author = True)
+    # if 'sus' in message.content: 
+    #     await message.reply("no u", mention_author = True)
 
     if message.content.startswith('$rbHello'):
         await message.channel.send('Hello!!!') 
