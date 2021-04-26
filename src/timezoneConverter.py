@@ -88,5 +88,5 @@ def from12HourTo24Hour(ampmTime, ampm):
     return newTime
     
 
-input = input("enter command:")
-timezoneConversion(input)
+# input = input("enter command:")
+# timezoneConversion(input)
