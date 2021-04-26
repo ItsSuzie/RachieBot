@@ -158,11 +158,11 @@ async def on_message(message):
         if randNum == 10:
             await message.reply("yay, you're sweet, I love you @{0.author} <3".format(message))
         if randNum == 11:
-            await message.reply("I wana date you @{0.author} ����")
+            await message.reply("I wana date you @{0.author}".format(message))
         if randNum == 12:
-            await message.reply("Im seiso")
+            await message.reply("Im seiso".format(message))
         if randNum == 13:
-            await message.reply ("im not seiso")
+            await message.reply ("im not seiso".format(message))
 
     
 
