@@ -52,7 +52,7 @@ def timezoneConversion(timezone):
 
         myTime = pendulum.datetime(2021, 1, 1, time24, 0, 0, 0, timezoneDict[timeList[3]])
         convert = myTime.in_timezone(timezoneDict[timeList[4]])
-        timeDiff = convert.diff(myTime).in_hours()
+        # timeDiff = convert.diff(myTime).in_hours()
         # print("printing converted time")
         # print(convert)
         # print(convert.strftime('%I:%M:%S %p'))
