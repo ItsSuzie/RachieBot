@@ -140,7 +140,7 @@ async def on_message(message):
     if client.user.mentioned_in(message):
         randNum = random.randint(1,13)
         if randNum == 1:
-            await message.reply("I want chocolate~ Feed me chocolate ${0.author} pls?")
+            await message.reply("I want chocolate~ Feed me chocolate ${0.author} pls?".format(message))
         elif randNum == 2:
             await message.reply("👉👈")
         elif randNum == 3:
