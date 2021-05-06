@@ -132,23 +132,25 @@ async def on_message(message):
     if message.content.startswith("$mineDiamonds"):
         await message.channel.send(copypastas.cp_mineDiamonds)
 
+    if message.content.startswith("$goodshit"):
+        await message.channel.send(copypastas.cp_goodShit)
 
 
     # if bot is mentioned
     if client.user.mentioned_in(message):
         randNum = random.randint(1,13)
         if randNum == 1:
-            await message.reply(copypastas.cp_rp)
+            await message.reply("I want chocolate~ Feed me chocolate ${0.author} pls?")
         elif randNum == 2:
-            await message.reply(copypastas.cp_tragedy)
+            await message.reply("👉👈")
         elif randNum == 3:
-            await message.reply(copypastas.cp_nvs)
+            await message.reply("c-can we play phasmo together?")
         elif randNum == 4:
-            await message.reply(copypastas.cp_fitness)
+            await message.reply("I b-baked this chocolate for you~")
         elif randNum == 5:
-            await message.reply(copypastas.cp_seiso)
+            await message.reply("my heart is going doki-doki around you~")
         elif randNum == 6:
-            await message.reply(copypastas.cp_meso)
+            await message.reply("uwu")
         elif randNum == 7:
             await message.reply("i love you bby".format(message))
         elif randNum == 8:

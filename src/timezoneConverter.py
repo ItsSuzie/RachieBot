@@ -28,7 +28,8 @@ timezoneDict = {
     "central": "CST6CDT",
     "est": "EST",
     "eastern": "EST",
-    "gb": "GB"
+    "gb": "GB",
+    "bst": "GB"
 }
 
 def timezoneConversion(timezone):
@@ -48,7 +49,11 @@ def timezoneConversion(timezone):
         # 0 = tz! | 1 = from time | 2 = am/pm | 3 = from timezone | 4 = to timezone
 
         # get 24 hour version of time
-        time24 = from12HourTo24Hour(int(timeList[1]), timeList[2])
+        if timeList[2] == "pm":
+            time24 = from12HourTo24Hour(int(timeList[1]), timeList[2])
+        else:
+            time24 = int(timeList[1])
+
 
         myTime = pendulum.datetime(2021, 1, 1, time24, 0, 0, 0, timezoneDict[timeList[3]])
         convert = myTime.in_timezone(timezoneDict[timeList[4]])
@@ -57,7 +62,9 @@ def timezoneConversion(timezone):
         # print(convert)
         # print(convert.strftime('%I:%M:%S %p'))
         # print(convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4] + "\n Time difference is " + str(timeDiff) + " hours"))
-        return convert.strftime('From ' + timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' to %I:%M:%S %p ' + timeList[4])
+        finalTimeStr = timeList[1] + ':00:00 ' + timeList[2] + ' ' + timeList[3] + ' is ' +  convert.strftime("%I:%M:%S %p") + ' ' + timeList[4]
+        return finalTimeStr
+        # print(finalTimeStr)
 
     # elif len(timeList) == 4:
     #     myTime = pendulum
@@ -76,11 +83,11 @@ def from12HourTo24Hour(ampmTime, ampm):
     # print("old time")
     # print(ampmTime)
     newTime = 0
-    if ampm == "pm":
-        if ampmTime == 12:
-            newTime = 00
-        else:
-            newTime = ampmTime + 12
+    # if ampm == "pm":
+    if ampmTime == 12:
+        newTime = 00
+    else:
+        newTime = ampmTime + 12
 
     # print("new time")
     # print(newTime)
