@@ -145,9 +145,10 @@ async def on_message(message):
     # Random meme poster
     if message.content.startswith("rb!meme"):
         meme = random.choice("../memes/")
-        with open(meme, 'rb') as newMeme:
-            finalMeme = discord.File(newMeme)
-            await message.channel.send(file=finalMeme)
+        print(meme)
+        # with open(meme, 'rb') as newMeme:
+        #     finalMeme = discord.File(newMeme)
+        #     await message.channel.send(file=finalMeme)
 
 
     # if bot is mentioned
