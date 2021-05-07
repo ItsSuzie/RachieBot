@@ -99,8 +99,10 @@ async def on_message(message):
 
 
 
+
+
     # timezone program
-    if message.content.startswith("tz!"):
+    if message.content.startswith("tz!") or message.content.startswith("Tz!") or message.content.startswith("tZ!") or message.content.startswith("TZ!"):
         await message.reply(timezoneConverter.timezoneConversion("{0.content}".format(message)), mention_author = True)
 
     
@@ -134,6 +136,9 @@ async def on_message(message):
 
     if message.content.startswith("$goodshit"):
         await message.channel.send(copypastas.cp_goodShit)
+        
+    if message.content.startswith("$approach"):
+        await message.channel.send(copypastas.cp_ohyoureapproachingme)
 
 
     # if bot is mentioned
