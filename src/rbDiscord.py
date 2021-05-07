@@ -2,6 +2,7 @@
 import discord
 import discord.ext.commands
 import random
+import os
 
 from discord.message import Message
 
@@ -105,8 +106,6 @@ async def on_message(message):
     if message.content.startswith("tz!") or message.content.startswith("Tz!") or message.content.startswith("tZ!") or message.content.startswith("TZ!"):
         await message.reply(timezoneConverter.timezoneConversion("{0.content}".format(message)), mention_author = True)
 
-    
-
 
 
     # Copypastas
@@ -139,6 +138,15 @@ async def on_message(message):
         
     if message.content.startswith("$approach"):
         await message.channel.send(copypastas.cp_ohyoureapproachingme)
+        
+
+
+    # Memes
+    # Random meme poster
+    if message.content.content("rb!meme"):
+        meme = random.choice("../memes/")
+        meme = discord.File(meme)
+        await message.channel.send(file=meme)
 
 
     # if bot is mentioned
