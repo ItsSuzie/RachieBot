@@ -143,7 +143,7 @@ async def on_message(message):
 
     # Memes
     # Random meme poster
-    if message.content.content("rb!meme"):
+    if message.content.startswith("rb!meme"):
         meme = random.choice("../memes/")
         meme = discord.File(meme)
         await message.channel.send(file=meme)
