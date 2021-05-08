@@ -146,7 +146,7 @@ async def on_message(message):
 
     # Memes
     # Random meme poster
-    if message.content.startswith("rb!meme"):
+    if message.content.startswith("rb!meme") or message.content.startswith("Rb!meme") or message.content.startswith("rB!meme") or message.content.startswith("RB!meme"):
         '''Get meme folder path
         set path to that folder
         get random meme
