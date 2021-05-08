@@ -144,10 +144,10 @@ async def on_message(message):
     # Memes
     # Random meme poster
     if message.content.startswith("rb!meme"):
-        path = os.getcwd()
+        # path = os.getcwd()
         # os.chdir(os.path.join(path, './memes/'))
-        path = os.chdir('/root/RachieBot/memes/')
-        print(path)
+        os.chdir('/root/RachieBot/memes/')
+        print(os.getcwd)
         # meme = random.choice(path + "../memes/")
         # print(meme)
         # with open(meme, 'rb') as newMeme:
