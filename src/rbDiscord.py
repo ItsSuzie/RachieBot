@@ -144,15 +144,13 @@ async def on_message(message):
     # Memes
     # Random meme poster
     if message.content.startswith("rb!meme"):
-        # path = os.getcwd()
-        # os.chdir(os.path.join(path, './memes/'))
         os.chdir('/root/RachieBot/memes/')
-        print(os.getcwd())
-        # meme = random.choice(path + "../memes/")
-        # print(meme)
-        # with open(meme, 'rb') as newMeme:
-        #     finalMeme = discord.File(newMeme)
-        #     await message.channel.send(file=finalMeme)
+        path = os.getcwd()
+        meme = random.choice(os.listdir(path))
+        # print(os.getcwd())
+        with open(meme, 'rb') as newMeme:
+            finalMeme = discord.File(newMeme)
+            await message.channel.send(file=finalMeme)
 
 
     # if bot is mentioned
