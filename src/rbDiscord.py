@@ -45,6 +45,9 @@ MinraEmotesOnly = 822856634950221835
 # rachiebot start message
 startmsg = "Hello world! I'm RachieBot! Rachie's shitposter bot!\n\nI have a variety of commands to play with!\n\nCommands I can do, Commands with arguments afterwards:\n- $caps ANYTHING YOU TYPE HERE WILL BE IN ALL CAPS\n- $WeIrD AnYtHiNg YoU TyPe HeRe WiLl Be SpElT In WeIrD CaSe WhErE EaCh ChArAcTeR AlTeRnAtEs CaSe. LiKe ThE SpOnGeBoB MeMe\n- $owoify Huohhhh. anythng uu type hewe wiww become vewy owoifyed ;3\n- $echo Anything you type here, i'll repeat!\n\nCommands without arguments:\n- $start - recites the starting text when you first launched her\n- $rp - Prints the infamous furry owo whats this copypasta\n- $tragedy - prints the amazing farth plageus the wise copypasta\n- $navyseal - prints the legendary navyseal copypasta\n\nhave fun!\n\nCreated by @Sindiewen on Twitter, Github, Telegram and Sindiewen#8507 on discord\nSource code avaliable here: https://github.com/Sindiewen/RachieBot"
 
+# meme folder path - where your memes lie
+memePath = '/root/RachieBot/memes/'
+
 
 print(" ------------------------------ ")
 print(" Starting Rachiebot, Discord... ")
@@ -144,7 +147,12 @@ async def on_message(message):
     # Memes
     # Random meme poster
     if message.content.startswith("rb!meme"):
-        os.chdir('/root/RachieBot/memes/')
+        '''Get meme folder path
+        set path to that folder
+        get random meme
+        post meme
+        '''
+        os.chdir(memePath)
         path = os.getcwd()
         meme = random.choice(os.listdir(path))
         # print(os.getcwd())
