@@ -147,7 +147,7 @@ async def on_message(message):
         # path = os.getcwd()
         # os.chdir(os.path.join(path, './memes/'))
         os.chdir('/root/RachieBot/memes/')
-        print(os.getcwd)
+        print(os.getcwd())
         # meme = random.choice(path + "../memes/")
         # print(meme)
         # with open(meme, 'rb') as newMeme:
