@@ -161,35 +161,35 @@ async def on_message(message):
             await message.channel.send(file=finalMeme)
 
 
-    # if bot is mentioned
-    if client.user.mentioned_in(message):
-        randNum = random.randint(1,13)
-        if randNum == 1:
-            await message.reply("I want chocolate~ Feed me chocolate ${0.author} pls?".format(message))
-        elif randNum == 2:
-            await message.reply("👉👈")
-        elif randNum == 3:
-            await message.reply("c-can we play phasmo together?")
-        elif randNum == 4:
-            await message.reply("I b-baked this chocolate for you~")
-        elif randNum == 5:
-            await message.reply("my heart is going doki-doki around you~")
-        elif randNum == 6:
-            await message.reply("uwu")
-        elif randNum == 7:
-            await message.reply("i love you bby".format(message))
-        elif randNum == 8:
-            await message.reply("c-can i get a hug pls @{0.author}?".format(message))
-        elif randNum == 9:
-            await message.reply("may i please get some huggie wuggies? uwu".format(message))
-        elif randNum == 10:
-            await message.reply("yay, you're sweet, I love you @{0.author} 💜".format(message))
-        elif randNum == 11:
-            await message.reply("👉👈I wana date you @{0.author}👉👈".format(message))
-        elif randNum == 12:
-            await message.reply("Im seiso".format(message))
-        elif randNum == 13:
-            await message.reply ("im not seiso".format(message))
+    # # if bot is mentioned
+    # if client.user.mentioned_in(message):
+    #     randNum = random.randint(1,13)
+    #     if randNum == 1:
+    #         await message.reply("I want chocolate~ Feed me chocolate ${0.author} pls?".format(message))
+    #     elif randNum == 2:
+    #         await message.reply("👉👈")
+    #     elif randNum == 3:
+    #         await message.reply("c-can we play phasmo together?")
+    #     elif randNum == 4:
+    #         await message.reply("I b-baked this chocolate for you~")
+    #     elif randNum == 5:
+    #         await message.reply("my heart is going doki-doki around you~")
+    #     elif randNum == 6:
+    #         await message.reply("uwu")
+    #     elif randNum == 7:
+    #         await message.reply("i love you bby".format(message))
+    #     elif randNum == 8:
+    #         await message.reply("c-can i get a hug pls @{0.author}?".format(message))
+    #     elif randNum == 9:
+    #         await message.reply("may i please get some huggie wuggies? uwu".format(message))
+    #     elif randNum == 10:
+    #         await message.reply("yay, you're sweet, I love you @{0.author} 💜".format(message))
+    #     elif randNum == 11:
+    #         await message.reply("👉👈I wana date you @{0.author}👉👈".format(message))
+    #     elif randNum == 12:
+    #         await message.reply("Im seiso".format(message))
+    #     elif randNum == 13:
+    #         await message.reply ("im not seiso".format(message))
 
     
 
