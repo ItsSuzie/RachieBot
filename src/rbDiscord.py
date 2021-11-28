@@ -5,6 +5,7 @@ import random
 import os
 
 from discord.message import Message
+from discord.utils import get
 
 
 # python file, to create the discord bot 
@@ -207,6 +208,12 @@ async def on_message(message):
     if message.content.startswith('$deleteme'):
         await message.delete()
         await message.channel.send("mesage deleted from {0.author}: {0.content}".format(message))
+
+
+    #Its Minra Discord Server Password check
+    if message.content == "dragon" or "Dragon" or "Faerie Dragon" or "faeire dragon":
+        role = get(message.server.roles, name='A Den member')
+        await client.add_roles(message.author, role)
 
     # within emotes only channel, if message doesnt have emote, delete messge
     # if client.get_channel(iStricerEmotesOnly).
