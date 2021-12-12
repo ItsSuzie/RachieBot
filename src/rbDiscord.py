@@ -50,6 +50,8 @@ startmsg = "Hello world! I'm RachieBot! Rachie's shitposter bot!\n\nI have a var
 memePath = '/root/RachieBot/memes/'
 
 
+
+
 print(" ------------------------------ ")
 print(" Starting Rachiebot, Discord... ")
 print(" ------------------------------ ")
@@ -210,10 +212,10 @@ async def on_message(message):
         await message.channel.send("mesage deleted from {0.author}: {0.content}".format(message))
 
 
-    #Its Minra Discord Server Password check
-    if message.content == "dragon" or "Dragon" or "Faerie Dragon" or "faeire dragon":
-        role = get(message.server.roles, name='A Den member')
-        await client.add_roles(message.author, role)
+    # #Its Minra Discord Server Password check
+    # if message.content == "dragon" or "Dragon" or "Faerie Dragon" or "faeire dragon":
+    #     member = message.author
+    #     await client.add_roles(message.author, role)
 
     # within emotes only channel, if message doesnt have emote, delete messge
     # if client.get_channel(iStricerEmotesOnly).
@@ -224,11 +226,16 @@ async def on_message(message):
     if message.channel == iStricerEmotesOnly:
         await channel.send("this is a test")
 
+    if message.content == "dragon" or "Dragon":
+        role = get(message.server.roles, name="A Den member")
+        await client.add.roles(message.author, role)
+
     
     
 
 
     # print('print from {0.author}: {0.content}'.format(message))
+
 
 
 
